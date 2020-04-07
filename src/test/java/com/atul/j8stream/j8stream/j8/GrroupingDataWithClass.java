@@ -36,7 +36,7 @@ public class GrroupingDataWithClass {
     @Test
     void test_grouping_and_counting() {
         final String[] names = {"ak", "bk", "ak", "bk", "pk"};
-        Map<String, Long> allCCount = Arrays.stream(names)
+        final Map<String, Long> allCCount = Arrays.stream(names)
                                           .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(allCCount);
     }
