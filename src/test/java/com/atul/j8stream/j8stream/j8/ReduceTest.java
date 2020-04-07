@@ -45,4 +45,19 @@ public class ReduceTest {
         Integer reduceTotal = Arrays.stream(arrayInteger).reduce(10, (a, b) -> a + b);
         System.out.println(reduceTotal);
     }
+
+
+    @Test
+    void test_joining() {
+        String[] strings = {"ab", "cd", "mn"};
+        String joined = Arrays.stream(strings).collect(Collectors.joining("->"));
+        System.out.println(joined);
+    }
+
+    @Test
+    void test_joining_without_Stram() {
+        String[] strings = {"ab", "cd", "mn"};
+        String joined = String.join("->", strings);
+        System.out.println(joined);
+    }
 }
